@@ -6,12 +6,19 @@
 //
 
 import SwiftUI
+import FamilyControls
+import DeviceActivity
 
 @main
 struct AppLockerApp: App {
+    
+    let center = AuthorizationCenter.shared
+//    @State private var context: DeviceActivityReport.Context =
+    
     var body: some Scene {
         WindowGroup {
             ContentView()
         }
     }
 }
+
