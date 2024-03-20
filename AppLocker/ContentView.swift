@@ -21,8 +21,8 @@ struct ContentView: View {
             } label: {
                 Text("앱 목록 보기")
             }
-            
         }
+        .familyActivityPicker(isPresented: $isPresented, selection: .constant(FamilyActivitySelection()))
     }
 }
 
