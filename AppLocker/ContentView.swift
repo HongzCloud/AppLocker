@@ -6,16 +6,23 @@
 //
 
 import SwiftUI
+import FamilyControls
 
 struct ContentView: View {
+    
+    @State var isPresented = false
+    
     var body: some View {
+        
         VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundStyle(.tint)
-            Text("Hello, world!")
+            Button {
+                isPresented = true
+                
+            } label: {
+                Text("앱 목록 보기")
+            }
+            
         }
-        .padding()
     }
 }
 
