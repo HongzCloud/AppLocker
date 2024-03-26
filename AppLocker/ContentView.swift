@@ -10,6 +10,7 @@ import FamilyControls
 
 struct ContentView: View {
     
+    @State var selection = FamilyActivitySelection()
     @State var isPresented = false
     
     var body: some View {
@@ -22,7 +23,7 @@ struct ContentView: View {
                 Text("앱 목록 보기")
             }
         }
-        .familyActivityPicker(isPresented: $isPresented, selection: .constant(FamilyActivitySelection()))
+        .familyActivityPicker(isPresented: $isPresented, selection: $selection)
     }
 }
 
