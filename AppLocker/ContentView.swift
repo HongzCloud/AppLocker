@@ -7,10 +7,12 @@
 
 import SwiftUI
 import FamilyControls
+import ManagedSettings
 
 struct ContentView: View {
+ 
+    @EnvironmentObject var model: Model
     
-    @State var selection = FamilyActivitySelection()
     @State var isPresented = false
     
     var body: some View {
@@ -22,8 +24,11 @@ struct ContentView: View {
             } label: {
                 Text("앱 목록 보기")
             }
+            .familyActivityPicker(isPresented: $isPresented, selection: $model.selectionToDiscourage)
         }
-        .familyActivityPicker(isPresented: $isPresented, selection: $selection)
+        .onChange(of: model.selectionToDiscourage, {
+            Model.shared.setShieldRestrictions()
+        })
     }
 }
 
