@@ -7,10 +7,12 @@
 
 import SwiftUI
 import FamilyControls
+import UserNotifications
 
 @main
 struct AppLockerApp: App {
     
+    @UIApplicationDelegateAdaptor private var appDelegate: AppDelegate
     @StateObject var model = Model.shared
     
     let center = AuthorizationCenter.shared
@@ -32,5 +34,20 @@ struct AppLockerApp: App {
                     }
                 }
         }
+    }
+}
+
+class AppDelegate: NSObject, UIApplicationDelegate, UNUserNotificationCenterDelegate {
+    
+    func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey : Any]? = nil) -> Bool {
+        
+        UNUserNotificationCenter.current().delegate = self
+            
+        return true
+    }
+    
+    func userNotificationCenter(_ center: UNUserNotificationCenter, willPresent notification: UNNotification) async -> UNNotificationPresentationOptions {
+        
+        return [.badge, .banner, .sound]
     }
 }
