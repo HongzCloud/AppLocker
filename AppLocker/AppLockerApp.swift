@@ -10,15 +10,19 @@ import FamilyControls
 
 @main
 struct AppLockerApp: App {
-
+    
     @StateObject var model = Model.shared
+    
     let center = AuthorizationCenter.shared
+    let schedule = Schedule()
     
     var body: some Scene {
         WindowGroup {
             ContentView()
                 .environmentObject(model)
                 .onAppear {
+                    schedule.setSchedule()
+                    
                     Task {
                         do {
                             try await center.requestAuthorization(for: .individual)
