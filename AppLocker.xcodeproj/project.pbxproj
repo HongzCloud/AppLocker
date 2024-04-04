@@ -15,6 +15,7 @@
 		1EC44F672BBEF76300078E8A /* DeviceActivity.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1EC44F662BBEF76300078E8A /* DeviceActivity.framework */; };
 		1EC44F6A2BBEF76300078E8A /* DeviceActivityMonitorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EC44F692BBEF76300078E8A /* DeviceActivityMonitorExtension.swift */; };
 		1EC44F6F2BBEF76300078E8A /* AppLockerDeviceActivityMonitor.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = 1EC44F642BBEF76300078E8A /* AppLockerDeviceActivityMonitor.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		1EC44F752BBEFD8000078E8A /* Schedule.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EC44F742BBEFD8000078E8A /* Schedule.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -54,6 +55,7 @@
 		1EC44F692BBEF76300078E8A /* DeviceActivityMonitorExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeviceActivityMonitorExtension.swift; sourceTree = "<group>"; };
 		1EC44F6B2BBEF76300078E8A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		1EC44F6C2BBEF76300078E8A /* AppLockerDeviceActivityMonitor.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = AppLockerDeviceActivityMonitor.entitlements; sourceTree = "<group>"; };
+		1EC44F742BBEFD8000078E8A /* Schedule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Schedule.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,6 +103,7 @@
 				1E3BE0772B499BAC00CD81DD /* AppLockerApp.swift */,
 				1E3BE0792B499BAC00CD81DD /* ContentView.swift */,
 				1E63F4512BB462F60057361B /* Model.swift */,
+				1EC44F742BBEFD8000078E8A /* Schedule.swift */,
 				1E3BE07B2B499BAF00CD81DD /* Assets.xcassets */,
 				1E3BE07D2B499BAF00CD81DD /* Preview Content */,
 			);
@@ -235,6 +238,7 @@
 			files = (
 				1E63F4522BB462F60057361B /* Model.swift in Sources */,
 				1E3BE07A2B499BAC00CD81DD /* ContentView.swift in Sources */,
+				1EC44F752BBEFD8000078E8A /* Schedule.swift in Sources */,
 				1E3BE0782B499BAC00CD81DD /* AppLockerApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
