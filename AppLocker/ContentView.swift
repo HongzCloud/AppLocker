@@ -14,7 +14,7 @@ struct ContentView: View {
     @EnvironmentObject var model: Model
     
     @State var isPresented = false
-    
+
     var body: some View {
         
         VStack {
@@ -28,6 +28,8 @@ struct ContentView: View {
         }
         .onChange(of: model.selectionToDiscourage, {
             Model.shared.setShieldRestrictions()
+            Model.shared.getSelection()
+                
         })
     }
 }

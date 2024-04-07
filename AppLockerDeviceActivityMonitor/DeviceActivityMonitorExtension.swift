@@ -7,15 +7,58 @@
 
 import UserNotifications
 import DeviceActivity
+import FamilyControls
+import ManagedSettings
 
 // Optionally override any of the functions below.
 // Make sure that your class name matches the NSExtensionPrincipalClass in your Info.plist.
 class DeviceActivityMonitorExtension: DeviceActivityMonitor {
+    
+    let sharedStorage = UserDefaults(suiteName: "test_my_storage")!
+    let store = ManagedSettingsStore()
+    
+    func getSelection() -> FamilyActivitySelection {
+        let documentsDirectory = FileManager().containerURL(forSecurityApplicationGroupIdentifier: "group.HongzCloud.AppLocker")
+        
+        guard let archiveURL = documentsDirectory?.appendingPathComponent("selection.plist") else {
+            print("FamilyActivitySelection 가져오기 실패: selection.plist 없음")
+            return FamilyActivitySelection()
+        }
+        
+        guard let codeData = try? Data(contentsOf: archiveURL) else {
+            print("FamilyActivitySelection 가져오기 실패: dodeData 없음")
+           
+            return FamilyActivitySelection()
+        }
+        
+        print("FamilyActivitySelection 가져오기 성공")
+        
+        let decoder = PropertyListDecoder()
+        let loadedSelection = (try! decoder.decode(FamilyActivitySelection.self, from: codeData))
+        print("loadedSelection: \(loadedSelection.applicationTokens)")
+        
+        return loadedSelection
+    }
+    
     override func intervalDidStart(for activity: DeviceActivityName) {
         super.intervalDidStart(for: activity)
         
         // Handle the start of the interval.
-        showLocalNotification(title: "intervalDidStart", desc: "intervalDidStart")
+
+        let selection = getSelection()
+        
+        let applications = selection
+            store.shield.applications = applications.applicationTokens.isEmpty ? nil : applications.applicationTokens
+            store.shield.applicationCategories = applications.categoryTokens.isEmpty
+            ? nil
+            : ShieldSettings.ActivityCategoryPolicy.specific(applications.categoryTokens)
+        showLocalNotification(title: "intervalDidStart", desc: "\(applications.applicationTokens)")
+        
+        
+        
+        
+        
+        
     }
     
     override func intervalDidEnd(for activity: DeviceActivityName) {

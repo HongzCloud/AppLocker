@@ -16,6 +16,7 @@
 		1EC44F6A2BBEF76300078E8A /* DeviceActivityMonitorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EC44F692BBEF76300078E8A /* DeviceActivityMonitorExtension.swift */; };
 		1EC44F6F2BBEF76300078E8A /* AppLockerDeviceActivityMonitor.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = 1EC44F642BBEF76300078E8A /* AppLockerDeviceActivityMonitor.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		1EC44F752BBEFD8000078E8A /* Schedule.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EC44F742BBEFD8000078E8A /* Schedule.swift */; };
+		1EC44F7B2BC27EED00078E8A /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E63F4512BB462F60057361B /* Model.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -248,6 +249,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				1EC44F6A2BBEF76300078E8A /* DeviceActivityMonitorExtension.swift in Sources */,
+				1EC44F7B2BC27EED00078E8A /* Model.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

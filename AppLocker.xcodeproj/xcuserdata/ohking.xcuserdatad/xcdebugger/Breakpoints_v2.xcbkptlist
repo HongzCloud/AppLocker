@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Bucket
+   uuid = "BEB63461-00EC-4488-9781-7DA3CFA01C9D"
+   type = "1"
+   version = "2.0">
+   <Breakpoints>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "62708EE8-C413-4D09-99CE-0215E149BD86"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "AppLocker/Model.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "37"
+            endingLineNumber = "37"
+            landmarkName = "saveSelection()"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "62708EE8-C413-4D09-99CE-0215E149BD86 - e4ac86b8101b0706"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "AppLockerDeviceActivityMonitor.Model.saveSelection() -&gt; ()"
+                  moduleName = "AppLockerDeviceActivityMonitor"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/ohking/Desktop/AppLocker/AppLocker/Model.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "37"
+                  endingLineNumber = "37"
+                  offsetFromSymbolStart = "644">
+               </Location>
+               <Location
+                  uuid = "62708EE8-C413-4D09-99CE-0215E149BD86 - 614bdb705e4eecb2"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "AppLocker.Model.saveSelection() -&gt; ()"
+                  moduleName = "AppLocker"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/ohking/Desktop/AppLocker/AppLocker/Model.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "37"
+                  endingLineNumber = "37"
+                  offsetFromSymbolStart = "644">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+   </Breakpoints>
+</Bucket>

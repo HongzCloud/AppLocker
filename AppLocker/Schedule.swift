@@ -17,7 +17,7 @@ extension DeviceActivityEvent.Name {
 }
 
 let schedule = DeviceActivitySchedule(
-    intervalStart: DateComponents(hour: 00, minute: 40),
+    intervalStart: DateComponents(hour: 17, minute: 45),
     intervalEnd: DateComponents(hour: 01, minute: 20),
     repeats: true
 )
